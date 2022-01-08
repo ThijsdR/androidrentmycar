@@ -3,6 +3,7 @@ package com.example.proftaakandroid
 import com.example.proftaakandroid.model.Car
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
+import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.*
@@ -28,10 +29,13 @@ interface CarApiService {
     suspend fun getCars(): List<Car>
 
     @DELETE("cars/{id}")
-    suspend fun deleteItem(@Path("id") todoId: Int)
+    suspend fun deleteCar(@Path("id") id: Int): Response<Unit>
 
-    @POST("cars")
-    suspend fun postItem(@Body car: Car): Car
+    @POST("cars/ice")
+    suspend fun postCarIce(@Body car: Car): Car
+
+    @POST("cars/ev")
+    suspend fun postCarEv(@Body car: Car): Car
 }
 
 object CarApi {

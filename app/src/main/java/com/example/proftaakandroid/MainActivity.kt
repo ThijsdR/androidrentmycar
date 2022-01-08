@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
+import com.example.proftaakandroid.constants.FuelType
 import com.example.proftaakandroid.databinding.ActivityMainBinding
 import com.example.proftaakandroid.model.Car
 import com.example.proftaakandroid.model.CarItem
@@ -34,15 +35,15 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.get.setOnClickListener {
-            model.getCarItems()
+            model.getCars()
         }
 
         binding.delete.setOnClickListener {
-            model.deleteCarItem(4)
+            model.deleteCar(4)
         }
 
         binding.post.setOnClickListener {
-            model.postCarItem(Car(owner = null, tco = 21, costsPerKM = 12, model = "Ja graag", id = 5, picture = "hallo"))
+            model.postCarIce(Car(owner = null, tco = 21, fuelType = FuelType.GAS, costsPerKM = 12, model = "Ja graag", id = 5, picture = "hallo"))
         }
     }
 }

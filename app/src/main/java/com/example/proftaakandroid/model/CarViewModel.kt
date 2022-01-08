@@ -16,10 +16,10 @@ class CarViewModel : ViewModel() {
         get() = _carResponse
 
     init {
-        getCarItems()
+        getCars()
     }
 
-    fun getCarItems() {
+    fun getCars() {
         viewModelScope.launch {
             try {
                 _carResponse.value = CarApi.retrofitService.getCars().toString()
@@ -29,10 +29,10 @@ class CarViewModel : ViewModel() {
         }
     }
 
-    fun deleteCarItem(id: Int) {
+    fun deleteCar(id: Int) {
         viewModelScope.launch {
             try {
-                CarApi.retrofitService.deleteItem(id)
+                CarApi.retrofitService.deleteCar(id)
                 _carResponse.value = "deleted item $id"
             } catch (e: Exception) {
                 _carResponse.value = e.message.toString()
@@ -40,10 +40,21 @@ class CarViewModel : ViewModel() {
         }
     }
 
-    fun postCarItem(car: Car) {
+    fun postCarIce(car: Car) {
         viewModelScope.launch {
             try {
-                CarApi.retrofitService.postItem(car)
+                CarApi.retrofitService.postCarIce(car)
+                _carResponse.value = "posted item $car"
+            } catch (e: Exception) {
+                _carResponse.value = e.message.toString()
+            }
+        }
+    }
+
+    fun postCarEv(car: Car) {
+        viewModelScope.launch {
+            try {
+                CarApi.retrofitService.postCarEv(car)
                 _carResponse.value = "posted item $car"
             } catch (e: Exception) {
                 _carResponse.value = e.message.toString()

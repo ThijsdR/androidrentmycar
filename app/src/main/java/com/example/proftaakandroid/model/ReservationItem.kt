@@ -1,5 +1,6 @@
 package com.example.proftaakandroid.model
 
+import com.example.proftaakandroid.constants.FuelType
 import com.squareup.moshi.Json
 
 data class ReservationItem(
@@ -17,7 +18,7 @@ data class Car(
 	val tco: Int? = null,
 
 	@Json(name="fuelType")
-	val fuelType: String? = null,
+	val fuelType: FuelType? = null,
 
 	@Json(name="costsPerKM")
 	val costsPerKM: Int? = null,
