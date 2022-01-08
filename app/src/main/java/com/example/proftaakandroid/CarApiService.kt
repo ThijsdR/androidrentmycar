@@ -30,7 +30,7 @@ interface CarApiService {
     @DELETE("cars/{id}")
     suspend fun deleteItem(@Path("id") todoId: Int)
 
-    @POST(value = "cars")
+    @POST("cars")
     suspend fun postItem(@Body car: Car): Car
 }
 

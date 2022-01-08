@@ -38,11 +38,11 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.delete.setOnClickListener {
-            model.deleteCarItem(2)
+            model.deleteCarItem(4)
         }
 
         binding.post.setOnClickListener {
-            model.postCarItem(Car(owner = null, tco = 21, fuelType = "Gas", costsPerKM = 12, model = "Ja graag", id = 5, picture = "hallo"))
+            model.postCarItem(Car(owner = null, tco = 21, costsPerKM = 12, model = "Ja graag", id = 5, picture = "hallo"))
         }
     }
 }
