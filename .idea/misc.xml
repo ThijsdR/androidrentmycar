@@ -6,7 +6,15 @@
         <entry key="..\:/repos/ProftaakAndroid/app/src/main/res/layout/activity_main.xml" value="0.2957427536231884" />
         <entry key="..\:/repos/ProftaakAndroid/app/src/main/res/layout/fragment_start_reservation.xml" value="0.2957427536231884" />
         <entry key="..\:/repos/androidrentmycar/app/src/main/res/layout/activity_main.xml" value="0.20520833333333333" />
+        <entry key="..\:/repos/androidrentmycar/app/src/main/res/layout/fragment_start_application.xml" value="0.36666666666666664" />
+        <entry key="..\:/repos/androidrentmycar/app/src/main/res/layout/fragment_start_car.xml" value="0.36666666666666664" />
+        <entry key="..\:/repos/androidrentmycar/app/src/main/res/layout/fragment_start_listing.xml" value="0.36666666666666664" />
         <entry key="..\:/repos/androidrentmycar/app/src/main/res/layout/fragment_start_reservation.xml" value="0.20520833333333333" />
+        <entry key="..\:/repos/androidrentmycar/app/src/main/res/layout/fragment_start_user.xml" value="0.36666666666666664" />
+        <entry key="..\:/repos/androidrentmycar/app/src/main/res/layout/fragment_view_car.xml" value="0.36666666666666664" />
+        <entry key="..\:/repos/androidrentmycar/app/src/main/res/layout/fragment_view_listing.xml" value="0.36666666666666664" />
+        <entry key="..\:/repos/androidrentmycar/app/src/main/res/layout/fragment_view_reservation.xml" value="0.36666666666666664" />
+        <entry key="..\:/repos/androidrentmycar/app/src/main/res/layout/fragment_view_user.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>

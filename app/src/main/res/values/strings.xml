@@ -3,4 +3,10 @@
     <string name="get">GET</string>
     <string name="delete">DELETE</string>
     <string name="post">POST</string>
+    <string name="car">Car</string>
+    <string name="listing">Listing</string>
+    <string name="reservation">Reservation</string>
+    <string name="user">User</string>
+    <string name="back">Back</string>
+    <string name="create_car">Create car</string>
 </resources>

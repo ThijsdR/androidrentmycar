@@ -1,10 +1,11 @@
-package com.example.proftaakandroid.model
+package com.example.proftaakandroid.model.viewmodels
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.proftaakandroid.CarApi
+import com.example.proftaakandroid.model.dataclasses.Car
+import com.example.proftaakandroid.services.CarApi
 import kotlinx.coroutines.launch
 
 private const val TAG = "CarViewModel"
@@ -23,6 +24,16 @@ class CarViewModel : ViewModel() {
         viewModelScope.launch {
             try {
                 _carResponse.value = CarApi.retrofitService.getCars().toString()
+            } catch (e: Exception) {
+                _carResponse.value = e.message.toString()
+            }
+        }
+    }
+
+    fun getCar(id: Int) {
+        viewModelScope.launch {
+            try {
+                _carResponse.value = CarApi.retrofitService.getCar(id).toString()
             } catch (e: Exception) {
                 _carResponse.value = e.message.toString()
             }

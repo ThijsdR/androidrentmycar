@@ -10,9 +10,8 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import com.example.proftaakandroid.constants.FuelType
 import com.example.proftaakandroid.databinding.ActivityMainBinding
-import com.example.proftaakandroid.model.Car
-import com.example.proftaakandroid.model.CarItem
-import com.example.proftaakandroid.model.CarViewModel
+import com.example.proftaakandroid.model.dataclasses.Car
+import com.example.proftaakandroid.model.viewmodels.CarViewModel
 
 class MainActivity : AppCompatActivity() {
     // Binding object instance corresponding to the activity_main.xml layout
@@ -29,22 +28,6 @@ class MainActivity : AppCompatActivity() {
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         navController = navHostFragment.navController
 
-        val model: CarViewModel by viewModels()
-        model.carResponse.observe(this) {
-            binding.result.text = model.carResponse.value
-        }
-
-        binding.get.setOnClickListener {
-            model.getCars()
-        }
-
-        binding.delete.setOnClickListener {
-            model.deleteCar(4)
-        }
-
-        binding.post.setOnClickListener {
-            model.postCarIce(Car(owner = null, tco = 21, fuelType = FuelType.GAS, costsPerKM = 12, model = "Ja graag", id = 5, picture = "hallo"))
-        }
     }
 }
 

@@ -2,10 +2,111 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@id/startReservationFragment">
+    app:startDestination="@id/startApplicationFragment">
 
+    <fragment
+        android:id="@+id/startApplicationFragment"
+        android:name="com.example.proftaakandroid.ui.StartApplicationFragment"
+        android:label="StartApplicationFragment" >
+        <action
+            android:id="@+id/action_startApplicationFragment_to_viewReservationFragment"
+            app:destination="@id/viewReservationFragment" />
+        <action
+            android:id="@+id/action_startApplicationFragment_to_viewCarFragment"
+            app:destination="@id/viewCarFragment" />
+        <action
+            android:id="@+id/action_startApplicationFragment_to_viewListingFragment"
+            app:destination="@id/viewListingFragment" />
+        <action
+            android:id="@+id/action_startApplicationFragment_to_viewUserFragment"
+            app:destination="@id/viewUserFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/startCarFragment"
+        android:name="com.example.proftaakandroid.ui.car.StartCarFragment"
+        android:label="StartCarFragment" >
+        <action
+            android:id="@+id/action_startCarFragment_to_startApplicationFragment"
+            app:destination="@id/startApplicationFragment" />
+        <action
+            android:id="@+id/action_startCarFragment_to_viewCarFragment"
+            app:destination="@id/viewCarFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewCarFragment"
+        android:name="com.example.proftaakandroid.ui.car.ViewCarFragment"
+        android:label="ViewCarFragment" >
+        <action
+            android:id="@+id/action_viewCarFragment_to_startCarFragment"
+            app:destination="@id/startCarFragment" />
+        <action
+            android:id="@+id/action_viewCarFragment_to_startApplicationFragment"
+            app:destination="@id/startApplicationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/startListingFragment"
+        android:name="com.example.proftaakandroid.ui.listing.StartListingFragment"
+        android:label="StartListingFragment" >
+        <action
+            android:id="@+id/action_startListingFragment_to_viewListingFragment"
+            app:destination="@id/viewListingFragment" />
+        <action
+            android:id="@+id/action_startListingFragment_to_startApplicationFragment"
+            app:destination="@id/startApplicationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewListingFragment"
+        android:name="com.example.proftaakandroid.ui.listing.ViewListingFragment"
+        android:label="ViewListingFragment" >
+        <action
+            android:id="@+id/action_viewListingFragment_to_startListingFragment"
+            app:destination="@id/startListingFragment" />
+        <action
+            android:id="@+id/action_viewListingFragment_to_startApplicationFragment"
+            app:destination="@id/startApplicationFragment" />
+    </fragment>
     <fragment
         android:id="@+id/startReservationFragment"
         android:name="com.example.proftaakandroid.ui.reservation.StartReservationFragment"
-        android:label="StartReservationFragment" />
+        android:label="StartReservationFragment" >
+        <action
+            android:id="@+id/action_startReservationFragment_to_startApplicationFragment"
+            app:destination="@id/startApplicationFragment" />
+        <action
+            android:id="@+id/action_startReservationFragment_to_viewReservationFragment"
+            app:destination="@id/viewReservationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewReservationFragment"
+        android:name="com.example.proftaakandroid.ui.reservation.ViewReservationFragment"
+        android:label="ViewReservationFragment" >
+        <action
+            android:id="@+id/action_viewReservationFragment_to_startReservationFragment"
+            app:destination="@id/startReservationFragment" />
+        <action
+            android:id="@+id/action_viewReservationFragment_to_startApplicationFragment"
+            app:destination="@id/startApplicationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/startUserFragment"
+        android:name="com.example.proftaakandroid.ui.user.StartUserFragment"
+        android:label="StartUserFragment" >
+        <action
+            android:id="@+id/action_startUserFragment_to_startApplicationFragment"
+            app:destination="@id/startApplicationFragment" />
+        <action
+            android:id="@+id/action_startUserFragment_to_viewUserFragment"
+            app:destination="@id/viewUserFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewUserFragment"
+        android:name="com.example.proftaakandroid.ui.user.ViewUserFragment"
+        android:label="ViewUserFragment" >
+        <action
+            android:id="@+id/action_viewUserFragment_to_startUserFragment"
+            app:destination="@id/startUserFragment" />
+        <action
+            android:id="@+id/action_viewUserFragment_to_startApplicationFragment"
+            app:destination="@id/startApplicationFragment" />
+    </fragment>
 </navigation>
